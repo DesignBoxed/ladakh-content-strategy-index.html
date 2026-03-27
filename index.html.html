@@ -1,0 +1,2056 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ladakh Content Strategy — Escape. Feel. Connect.</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Noto+Serif+Devanagari:wght@300;400&display=swap');
+
+  :root {
+    --gold: #C9A84C;
+    --deep-blue: #0B1A2E;
+    --sky: #5B8DB8;
+    --sand: #D4B896;
+    --rust: #A0522D;
+    --snow: #F4F0EA;
+    --night: #050D1A;
+    --teal: #2A7C8E;
+    --cream: #FAF6EE;
+    --muted: #7A7065;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--night);
+    color: var(--snow);
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0;
+    z-index: 1000;
+    padding: 1rem 2rem;
+    display: flex; justify-content: space-between; align-items: center;
+    background: rgba(5,13,26,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(201,168,76,0.15);
+  }
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.15em;
+    color: var(--gold);
+    text-transform: uppercase;
+  }
+  .nav-logo img {
+    height: 36px;
+    width: auto;
+    object-fit: contain;
+    filter: none;
+    opacity: 1;
+  }
+  .nav-links { display: flex; gap: 1.5rem; }
+  .nav-links a {
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(244,240,234,0.6);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+
+  /* SECTIONS */
+  section {
+    min-height: 100vh;
+    padding: 7rem 5% 5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* ========== HERO ========== */
+  #hero {
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
+    text-align: center;
+    padding: 0;
+    background: var(--night);
+  }
+  .stars-bg {
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 20% 50%, rgba(91,141,184,0.08) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 20%, rgba(201,168,76,0.06) 0%, transparent 50%);
+  }
+  .stars-canvas {
+    position: absolute; inset: 0;
+    background-image:
+      radial-gradient(1px 1px at 10% 15%, rgba(255,255,255,0.9) 0%, transparent 100%),
+      radial-gradient(1px 1px at 25% 35%, rgba(255,255,255,0.7) 0%, transparent 100%),
+      radial-gradient(1.5px 1.5px at 40% 10%, rgba(255,255,255,0.8) 0%, transparent 100%),
+      radial-gradient(1px 1px at 55% 25%, rgba(255,255,255,0.6) 0%, transparent 100%),
+      radial-gradient(1px 1px at 70% 12%, rgba(255,255,255,0.9) 0%, transparent 100%),
+      radial-gradient(1px 1px at 85% 30%, rgba(255,255,255,0.7) 0%, transparent 100%),
+      radial-gradient(1px 1px at 15% 60%, rgba(255,255,255,0.5) 0%, transparent 100%),
+      radial-gradient(1px 1px at 30% 70%, rgba(255,255,255,0.8) 0%, transparent 100%),
+      radial-gradient(1px 1px at 45% 55%, rgba(255,255,255,0.6) 0%, transparent 100%),
+      radial-gradient(1px 1px at 60% 65%, rgba(255,255,255,0.7) 0%, transparent 100%),
+      radial-gradient(1px 1px at 75% 50%, rgba(255,255,255,0.9) 0%, transparent 100%),
+      radial-gradient(1px 1px at 90% 75%, rgba(255,255,255,0.5) 0%, transparent 100%),
+      radial-gradient(1px 1px at 5% 80%, rgba(255,255,255,0.8) 0%, transparent 100%),
+      radial-gradient(1px 1px at 20% 90%, rgba(255,255,255,0.6) 0%, transparent 100%),
+      radial-gradient(1px 1px at 50% 85%, rgba(255,255,255,0.7) 0%, transparent 100%),
+      radial-gradient(1px 1px at 65% 90%, rgba(255,255,255,0.5) 0%, transparent 100%),
+      radial-gradient(1px 1px at 80% 85%, rgba(255,255,255,0.8) 0%, transparent 100%),
+      radial-gradient(2px 2px at 35% 45%, rgba(201,168,76,0.5) 0%, transparent 100%),
+      radial-gradient(2px 2px at 62% 38%, rgba(91,141,184,0.6) 0%, transparent 100%),
+      radial-gradient(1px 1px at 92% 42%, rgba(255,255,255,0.9) 0%, transparent 100%);
+  }
+  .mountains-silhouette {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    height: 45vh;
+    background: linear-gradient(to top, var(--deep-blue) 0%, rgba(11,26,46,0.6) 60%, transparent 100%);
+    clip-path: polygon(0% 100%, 0% 75%, 5% 60%, 10% 72%, 15% 45%, 22% 65%, 28% 30%, 35% 55%, 40% 20%, 47% 50%, 52% 15%, 58% 45%, 63% 25%, 70% 55%, 76% 35%, 82% 58%, 88% 40%, 93% 62%, 98% 48%, 100% 55%, 100% 100%);
+  }
+  .figure-silhouette {
+    position: absolute; bottom: 8vh; left: 50%;
+    transform: translateX(-50%);
+    width: 60px; height: 120px;
+    opacity: 0.85;
+  }
+  .hero-content {
+    position: relative; z-index: 2;
+    max-width: 900px;
+    animation: fadeUp 1.5s ease forwards;
+  }
+  .hero-eyebrow {
+    font-size: 0.7rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+  }
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3.5rem, 8vw, 7rem);
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -0.01em;
+    margin-bottom: 1rem;
+  }
+  .hero-title em { font-style: italic; color: var(--gold); }
+  .hero-tagline-block {
+    margin: 2rem 0;
+    padding: 1.5rem 2rem;
+    border: 1px solid rgba(201,168,76,0.3);
+    display: inline-block;
+  }
+  .hero-tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--sand);
+    letter-spacing: 0.05em;
+  }
+  .hero-tagline-hindi {
+    font-family: 'Noto Serif Devanagari', serif;
+    font-size: 1rem;
+    color: rgba(212,184,150,0.7);
+    margin-top: 0.4rem;
+    letter-spacing: 0.05em;
+  }
+  .hero-sub {
+    font-size: 0.9rem;
+    color: rgba(244,240,234,0.55);
+    letter-spacing: 0.08em;
+    margin-top: 2rem;
+  }
+  .scroll-cue {
+    position: absolute; bottom: 2.5rem; left: 50%;
+    transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+    color: rgba(244,240,234,0.4);
+    font-size: 0.65rem; letter-spacing: 0.2em;
+    animation: bounce 2s infinite;
+  }
+  .scroll-cue::after {
+    content: ''; width: 1px; height: 40px;
+    background: linear-gradient(to bottom, var(--gold), transparent);
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(8px); }
+  }
+
+  /* ========== SECTION HEADERS ========== */
+  .section-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.8rem;
+  }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    font-weight: 300;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+  .section-title em { font-style: italic; color: var(--gold); }
+  .section-divider {
+    width: 60px; height: 1px;
+    background: linear-gradient(to right, var(--gold), transparent);
+    margin: 1.5rem 0;
+  }
+
+  /* ========== STORY SECTION ========== */
+  #story {
+    background: linear-gradient(135deg, var(--deep-blue) 0%, #0D1E35 100%);
+    display: flex; align-items: center;
+  }
+  .story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .story-text p {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: rgba(244,240,234,0.8);
+    margin-bottom: 1.2rem;
+  }
+  .story-text p strong {
+    color: var(--gold);
+    font-weight: 500;
+  }
+  .quote-block {
+    padding: 2rem;
+    border-left: 3px solid var(--gold);
+    background: rgba(201,168,76,0.06);
+    margin: 2rem 0;
+  }
+  .quote-block p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-style: italic;
+    line-height: 1.5;
+    color: var(--sand) !important;
+  }
+  .story-visual {
+    position: relative;
+    padding: 3rem;
+  }
+  .visual-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(201,168,76,0.2);
+    padding: 2.5rem;
+    position: relative;
+  }
+  .visual-card::before {
+    content: '';
+    position: absolute; top: -1px; left: -1px; right: -1px; bottom: -1px;
+    background: linear-gradient(135deg, rgba(201,168,76,0.15), transparent 50%);
+    pointer-events: none;
+  }
+  .stat-row { display: flex; gap: 1.5rem; flex-wrap: wrap; margin-top: 1rem; }
+  .stat-item { flex: 1; min-width: 100px; }
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--gold);
+    display: block;
+  }
+  .stat-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    color: rgba(244,240,234,0.5);
+    text-transform: uppercase;
+  }
+
+  /* ========== GEOGRAPHY ========== */
+  #geography {
+    background: var(--night);
+  }
+  .geo-content { max-width: 1200px; margin: 0 auto; }
+  .geo-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-top: 3rem;
+  }
+  .geo-text p {
+    font-size: 0.95rem;
+    line-height: 1.9;
+    color: rgba(244,240,234,0.75);
+    margin-bottom: 1rem;
+  }
+  .geo-facts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  .fact-card {
+    background: rgba(91,141,184,0.08);
+    border: 1px solid rgba(91,141,184,0.2);
+    padding: 1.5rem;
+    transition: all 0.3s;
+  }
+  .fact-card:hover {
+    background: rgba(91,141,184,0.15);
+    border-color: var(--gold);
+  }
+  .fact-icon { font-size: 1.8rem; margin-bottom: 0.5rem; }
+  .fact-title {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.3rem;
+  }
+  .fact-desc {
+    font-size: 0.85rem;
+    color: rgba(244,240,234,0.7);
+    line-height: 1.5;
+  }
+
+  /* ========== PROBLEM ========== */
+  #problem {
+    background: linear-gradient(180deg, var(--night) 0%, #0a1525 100%);
+  }
+  .problem-content { max-width: 1100px; margin: 0 auto; }
+  .problem-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  .problem-card {
+    padding: 2.5rem;
+    border: 1px solid rgba(160,82,45,0.25);
+    background: rgba(160,82,45,0.05);
+    position: relative;
+  }
+  .problem-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; width: 100%; height: 3px;
+    background: linear-gradient(to right, var(--rust), transparent);
+  }
+  .problem-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    color: rgba(160,82,45,0.3);
+    font-weight: 300;
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+  .problem-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--sand);
+    margin-bottom: 0.8rem;
+  }
+  .problem-card p {
+    font-size: 0.85rem;
+    line-height: 1.7;
+    color: rgba(244,240,234,0.6);
+  }
+
+  /* ========== APPROACH ========== */
+  #approach {
+    background: linear-gradient(135deg, #0a1820 0%, var(--deep-blue) 100%);
+  }
+  .approach-content { max-width: 1200px; margin: 0 auto; }
+  .approach-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 5rem;
+    margin-top: 3rem;
+    align-items: start;
+  }
+  .approach-steps { display: flex; flex-direction: column; gap: 2rem; }
+  .step {
+    display: flex; gap: 1.5rem; align-items: flex-start;
+    padding: 1.5rem;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(201,168,76,0.1);
+    transition: all 0.3s;
+  }
+  .step:hover { background: rgba(201,168,76,0.06); border-color: rgba(201,168,76,0.3); }
+  .step-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    color: var(--gold);
+    opacity: 0.5;
+    min-width: 40px;
+    font-weight: 300;
+  }
+  .step-body h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 0.4rem;
+    color: var(--snow);
+  }
+  .step-body p {
+    font-size: 0.85rem;
+    line-height: 1.7;
+    color: rgba(244,240,234,0.6);
+  }
+  .tagline-box {
+    background: rgba(201,168,76,0.08);
+    border: 1px solid rgba(201,168,76,0.3);
+    padding: 3rem 2.5rem;
+    text-align: center;
+    position: sticky; top: 7rem;
+  }
+  .tagline-box .big-tag {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    font-style: italic;
+    color: var(--gold);
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+  }
+  .lang-tags { display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem; }
+  .lang-tag {
+    padding: 0.8rem 1rem;
+    border: 1px solid rgba(201,168,76,0.15);
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .lang-name { font-size: 0.65rem; letter-spacing: 0.15em; color: var(--gold); text-transform: uppercase; }
+  .lang-text { font-size: 1rem; color: var(--snow); font-family: 'Noto Serif Devanagari', serif; }
+
+  /* ========== PILLARS ========== */
+  #pillars {
+    background: var(--night);
+  }
+  .pillars-content { max-width: 1200px; margin: 0 auto; }
+  .pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1px;
+    margin-top: 3rem;
+    background: rgba(201,168,76,0.1);
+  }
+  .pillar {
+    background: var(--night);
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    transition: all 0.3s;
+    cursor: default;
+  }
+  .pillar:hover {
+    background: rgba(201,168,76,0.07);
+    transform: translateY(-4px);
+  }
+  .pillar-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+  .pillar-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    color: var(--gold);
+    margin-bottom: 0.8rem;
+    font-weight: 400;
+  }
+  .pillar-tags { display: flex; flex-direction: column; gap: 0.3rem; }
+  .ptag {
+    font-size: 0.7rem;
+    color: rgba(244,240,234,0.5);
+    letter-spacing: 0.05em;
+  }
+
+  /* ========== SEASONS ========== */
+  #seasons {
+    background: linear-gradient(180deg, #0a1525 0%, var(--night) 100%);
+    padding: 7rem 5%;
+  }
+  .seasons-content { max-width: 1200px; margin: 0 auto; }
+  .seasons-tabs {
+    display: flex; gap: 0; margin-top: 3rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .s-tab {
+    padding: 1rem 2rem;
+    background: none; border: none;
+    color: rgba(244,240,234,0.4);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s;
+    margin-bottom: -1px;
+  }
+  .s-tab.active { color: var(--gold); border-bottom-color: var(--gold); }
+  .season-panel { display: none; padding: 3rem 0; }
+  .season-panel.active { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+  .s-left h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem; font-weight: 300;
+    color: var(--snow); margin-bottom: 0.5rem;
+  }
+  .s-months {
+    font-size: 0.7rem; letter-spacing: 0.2em;
+    color: var(--gold); text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+  .s-left p {
+    font-size: 0.9rem; line-height: 1.8;
+    color: rgba(244,240,234,0.7); margin-bottom: 1rem;
+  }
+  .s-activities, .s-wear, .s-food, .s-content-ideas {
+    margin-top: 1.5rem;
+  }
+  .s-sub-title {
+    font-size: 0.65rem; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--gold);
+    margin-bottom: 0.8rem;
+  }
+  .tag-cloud { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .s-tag {
+    padding: 0.3rem 0.8rem;
+    border: 1px solid rgba(201,168,76,0.25);
+    font-size: 0.75rem;
+    color: rgba(244,240,234,0.7);
+    background: rgba(201,168,76,0.05);
+  }
+  .s-right { border-left: 1px solid rgba(255,255,255,0.07); padding-left: 4rem; }
+  .weather-info {
+    background: rgba(91,141,184,0.08);
+    border: 1px solid rgba(91,141,184,0.2);
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+  .weather-row { display: flex; justify-content: space-between; margin-bottom: 0.8rem; }
+  .weather-key { font-size: 0.75rem; color: rgba(244,240,234,0.5); letter-spacing: 0.05em; }
+  .weather-val { font-size: 0.85rem; color: var(--snow); font-weight: 500; }
+  .s-dress p { font-size: 0.85rem; line-height: 1.7; color: rgba(244,240,234,0.7); }
+
+  /* ========== ROADMAP ========== */
+  #roadmap {
+    background: var(--deep-blue);
+    padding: 7rem 5%;
+  }
+  .road-content { max-width: 1200px; margin: 0 auto; }
+  .road-route {
+    margin-top: 3rem;
+    position: relative;
+  }
+  .route-line {
+    position: absolute; left: 30px; top: 0; bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--gold), var(--teal), var(--sky));
+  }
+  .route-stop {
+    display: flex; gap: 2rem;
+    padding: 0 0 3rem 5rem;
+    position: relative;
+  }
+  .route-stop::before {
+    content: '';
+    position: absolute; left: 22px;
+    width: 16px; height: 16px;
+    border-radius: 50%;
+    background: var(--gold);
+    border: 3px solid var(--deep-blue);
+    top: 4px;
+    box-shadow: 0 0 0 4px rgba(201,168,76,0.2);
+  }
+  .stop-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    color: var(--gold);
+    text-transform: uppercase;
+    min-width: 80px;
+    padding-top: 0.2rem;
+  }
+  .stop-body { flex: 1; }
+  .stop-body h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem; font-weight: 400;
+    color: var(--snow); margin-bottom: 0.4rem;
+  }
+  .stop-alt {
+    font-size: 0.7rem; letter-spacing: 0.1em;
+    color: var(--gold); margin-bottom: 0.6rem;
+  }
+  .stop-body p {
+    font-size: 0.85rem; line-height: 1.7;
+    color: rgba(244,240,234,0.65);
+  }
+  .stop-acts { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.8rem; }
+  .act-tag {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.6rem;
+    background: rgba(42,124,142,0.15);
+    border: 1px solid rgba(42,124,142,0.3);
+    color: rgba(244,240,234,0.7);
+  }
+
+  /* ========== CULTURE ========== */
+  #culture {
+    background: linear-gradient(180deg, var(--night) 0%, #0D1E35 100%);
+    padding: 7rem 5%;
+  }
+  .culture-content { max-width: 1200px; margin: 0 auto; }
+  .culture-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  .culture-card {
+    padding: 2rem;
+    border: 1px solid rgba(255,255,255,0.07);
+    background: rgba(255,255,255,0.02);
+    transition: all 0.3s;
+  }
+  .culture-card:hover {
+    border-color: rgba(201,168,76,0.3);
+    background: rgba(201,168,76,0.04);
+  }
+  .c-icon { font-size: 2rem; margin-bottom: 1rem; }
+  .culture-card h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem; font-weight: 400;
+    color: var(--sand); margin-bottom: 0.6rem;
+  }
+  .culture-card p {
+    font-size: 0.82rem; line-height: 1.7;
+    color: rgba(244,240,234,0.6);
+  }
+
+  /* ========== PLATFORM STRATEGY ========== */
+  #platforms {
+    background: var(--night);
+    padding: 7rem 5%;
+  }
+  .plat-content { max-width: 1200px; margin: 0 auto; }
+  .plat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+  .plat-card {
+    padding: 2rem;
+    border: 1px solid rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.02);
+    transition: all 0.3s;
+  }
+  .plat-card:hover { transform: translateY(-4px); border-color: rgba(91,141,184,0.4); }
+  .plat-name {
+    font-size: 0.65rem; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--sky);
+    margin-bottom: 0.8rem;
+  }
+  .plat-card h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem; font-weight: 400;
+    color: var(--snow); margin-bottom: 0.8rem;
+  }
+  .plat-card ul { list-style: none; }
+  .plat-card li {
+    font-size: 0.78rem;
+    color: rgba(244,240,234,0.6);
+    padding: 0.2rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+  }
+  .plat-card li::before { content: '— '; color: var(--gold); }
+
+  /* ========== CALENDAR ========== */
+  #calendar {
+    background: linear-gradient(135deg, #0a1820 0%, var(--night) 100%);
+    padding: 7rem 5%;
+    overflow-x: auto;
+  }
+  .cal-content { max-width: 1300px; margin: 0 auto; }
+  .cal-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 3rem;
+    font-size: 0.75rem;
+  }
+  .cal-table th {
+    background: rgba(201,168,76,0.12);
+    color: var(--gold);
+    padding: 0.8rem 0.6rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-size: 0.65rem;
+    font-weight: 500;
+    text-align: left;
+    border-bottom: 1px solid rgba(201,168,76,0.2);
+  }
+  .cal-table td {
+    padding: 0.7rem 0.6rem;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    color: rgba(244,240,234,0.75);
+    vertical-align: top;
+  }
+  .cal-table tr:hover td { background: rgba(255,255,255,0.03); }
+  .cal-month {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    color: var(--snow);
+    font-weight: 400;
+  }
+  .platform-badge {
+    display: inline-block;
+    padding: 0.15rem 0.45rem;
+    border-radius: 0;
+    font-size: 0.62rem;
+    letter-spacing: 0.05em;
+    margin: 0.1rem;
+    background: rgba(91,141,184,0.15);
+    border: 1px solid rgba(91,141,184,0.25);
+    color: var(--sky);
+  }
+  .badge-reel { background: rgba(201,168,76,0.12); border-color: rgba(201,168,76,0.25); color: var(--gold); }
+  .badge-blog { background: rgba(42,124,142,0.12); border-color: rgba(42,124,142,0.25); color: #5EC8D8; }
+
+  /* ========== KPIs ========== */
+  #kpis {
+    background: var(--night);
+    padding: 7rem 5%;
+  }
+  .kpi-content { max-width: 1200px; margin: 0 auto; }
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  .kpi-card {
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+    border: 1px solid rgba(201,168,76,0.15);
+    background: rgba(201,168,76,0.03);
+    transition: all 0.3s;
+  }
+  .kpi-card:hover {
+    border-color: var(--gold);
+    background: rgba(201,168,76,0.08);
+    transform: scale(1.02);
+  }
+  .kpi-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.8rem;
+    font-weight: 300;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+  .kpi-label { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(244,240,234,0.5); }
+  .kpi-phase {
+    font-size: 0.75rem; color: rgba(244,240,234,0.4);
+    margin-top: 0.5rem;
+    font-style: italic;
+  }
+
+  /* ========== TIMELINE ========== */
+  #timeline {
+    background: linear-gradient(180deg, #0a1525 0%, var(--night) 100%);
+    padding: 7rem 5%;
+  }
+  .tl-content { max-width: 1200px; margin: 0 auto; }
+  .tl-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    margin-top: 3rem;
+    background: rgba(255,255,255,0.05);
+  }
+  .tl-phase {
+    background: var(--night);
+    padding: 2.5rem 1.8rem;
+    position: relative;
+  }
+  .tl-phase::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 3px;
+  }
+  .phase-1::before { background: var(--gold); }
+  .phase-2::before { background: var(--sky); }
+  .phase-3::before { background: var(--teal); }
+  .phase-4::before { background: var(--sand); }
+  .tl-quarter {
+    font-size: 0.65rem; letter-spacing: 0.2em;
+    text-transform: uppercase; color: rgba(244,240,234,0.4);
+    margin-bottom: 0.5rem;
+  }
+  .tl-phase h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem; font-weight: 400;
+    color: var(--snow); margin-bottom: 1.2rem;
+  }
+  .tl-items { display: flex; flex-direction: column; gap: 0.6rem; }
+  .tl-item { font-size: 0.78rem; color: rgba(244,240,234,0.65); display: flex; gap: 0.5rem; }
+  .tl-item::before { content: '•'; color: var(--gold); }
+
+  /* ========== WHY US ========== */
+  #whyus {
+    background: linear-gradient(135deg, var(--deep-blue) 0%, #0a1820 100%);
+    padding: 7rem 5%;
+  }
+  .why-content { max-width: 1100px; margin: 0 auto; }
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  .why-card {
+    padding: 2.5rem 2rem;
+    border: 1px solid rgba(255,255,255,0.06);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+  }
+  .why-card::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(201,168,76,0.07), transparent);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .why-card:hover::after { opacity: 1; }
+  .why-card:hover { border-color: rgba(201,168,76,0.3); }
+  .why-card h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem; font-weight: 400;
+    color: var(--gold); margin-bottom: 0.8rem;
+  }
+  .why-card p {
+    font-size: 0.85rem; line-height: 1.7;
+    color: rgba(244,240,234,0.6);
+  }
+
+  /* ========== CLOSING ========== */
+  #closing {
+    min-height: 80vh;
+    background: var(--night);
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
+    text-align: center;
+    position: relative;
+  }
+  .closing-bg {
+    position: absolute; inset: 0;
+    background-image: var(--stars);
+    opacity: 0.4;
+  }
+  .closing-content { position: relative; z-index: 2; max-width: 700px; padding: 4rem 2rem; }
+  .closing-content h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--sand);
+    line-height: 1.2;
+    margin-bottom: 2rem;
+  }
+  .closing-content p {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: rgba(244,240,234,0.6);
+    margin-bottom: 2rem;
+  }
+  .cta-btn {
+    display: inline-block;
+    padding: 1rem 3rem;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    font-size: 0.75rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  .cta-btn:hover { background: var(--gold); color: var(--night); }
+
+  /* Footer */
+  footer {
+    padding: 2rem 5%;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 0.7rem;
+    color: rgba(244,240,234,0.3);
+    letter-spacing: 0.08em;
+  }
+
+  @media (max-width: 900px) {
+    .story-grid, .geo-body, .approach-grid,
+    .problem-grid, .culture-grid, .kpi-grid,
+    .tl-grid, .why-grid { grid-template-columns: 1fr; }
+    .pillars-grid { grid-template-columns: repeat(2, 1fr); }
+    .plat-grid { grid-template-columns: repeat(2, 1fr); }
+    .season-panel.active { grid-template-columns: 1fr; }
+    .s-right { border-left: none; padding-left: 0; border-top: 1px solid rgba(255,255,255,0.07); padding-top: 2rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo"><img src="data:image/png;base64,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" alt="DesignBoxed">Ladakh Content Strategy</div>
+  <div class="nav-links">
+    <a href="#story">Story</a>
+    <a href="#problem">Problem</a>
+    <a href="#approach">Approach</a>
+    <a href="#pillars">Pillars</a>
+    <a href="#seasons">Seasons</a>
+    <a href="#roadmap">Route</a>
+    <a href="#platforms">Platforms</a>
+    <a href="#calendar">Calendar</a>
+    <a href="#kpis">KPIs</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="stars-bg"></div>
+  <div class="stars-canvas"></div>
+  <div class="mountains-silhouette"></div>
+
+  <!-- Sitting figure SVG -->
+  <svg class="figure-silhouette" viewBox="0 0 60 120" xmlns="http://www.w3.org/2000/svg">
+    <ellipse cx="30" cy="12" rx="10" ry="10" fill="rgba(11,26,46,0.9)" stroke="rgba(201,168,76,0.3)" stroke-width="0.5"/>
+    <path d="M20 22 Q15 50 10 65 Q20 70 30 68 Q40 70 50 65 Q45 50 40 22 Z" fill="rgba(11,26,46,0.9)" stroke="rgba(201,168,76,0.3)" stroke-width="0.5"/>
+    <path d="M15 65 Q8 85 5 100" stroke="rgba(201,168,76,0.3)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <path d="M45 65 Q52 85 55 100" stroke="rgba(201,168,76,0.3)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <ellipse cx="30" cy="105" rx="22" ry="8" fill="rgba(11,26,46,0.9)" stroke="rgba(201,168,76,0.2)" stroke-width="0.5"/>
+  </svg>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow">Ladakh Tourism · Content Strategy Proposal · 2026–27 · by DesignBoxed</div>
+    <h1 class="hero-title">Where India Finds<br><em>Its Soul</em></h1>
+
+    <div class="hero-tagline-block">
+      <div class="hero-tagline">"Escape. Feel. Connect."</div>
+      <div class="hero-tagline-hindi">भाग जाओ। महसूस करो। जुड़ जाओ।</div>
+    </div>
+
+    <p class="hero-sub">A Full-Spectrum Content & Brand Strategy for Ladakh Tourism</p>
+  </div>
+
+  <div class="scroll-cue">SCROLL</div>
+</section>
+
+<!-- THE HUMAN STORY -->
+<section id="story">
+  <div class="story-grid">
+    <div class="story-text">
+      <div class="section-label">The Story We're Telling</div>
+      <h2 class="section-title">He closed his eyes<br>at <em>2:47 PM</em></h2>
+      <div class="section-divider"></div>
+
+      <p>The meeting had been going on for three hours. The laptop screen glowed. Notifications piled up. Outside the 14th floor window, Mumbai blurred into grey noise.</p>
+
+      <p><strong>He closed his eyes for just a second.</strong></p>
+
+      <p>And he was there. Wind. Cold. Clean. A sky so full of stars it felt invented. No phone signal. No deadlines. Just the sound of his own breathing and a horizon that went on forever.</p>
+
+      <div class="quote-block">
+        <p>"He wasn't imagining Switzerland. He wasn't imagining Iceland.<br>He was imagining <strong>Ladakh.</strong> He just didn't know it yet."</p>
+      </div>
+
+      <p>This is the story of every urban Indian, every tired soul chasing a reset. Ladakh isn't just a destination — it is the <strong>answer to a question people carry in their chest</strong> every single day.</p>
+
+      <p>Our content strategy doesn't sell packages. It <strong>surfaces the longing</strong> already inside your audience and shows them exactly where to go.</p>
+    </div>
+
+    <div class="story-visual">
+      <div class="visual-card">
+        <div class="section-label">Ladakh In Numbers</div>
+        <div class="stat-row">
+          <div class="stat-item">
+            <span class="stat-num">60K</span>
+            <span class="stat-label">sq. miles of terrain</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">3,500m</span>
+            <span class="stat-label">avg. valley altitude</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">~5cm</span>
+            <span class="stat-label">annual rainfall</span>
+          </div>
+        </div>
+        <div class="stat-row" style="margin-top:1.5rem;">
+          <div class="stat-item">
+            <span class="stat-num">7,000m+</span>
+            <span class="stat-label">surrounding peaks</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">4</span>
+            <span class="stat-label">great mountain ranges</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">300+</span>
+            <span class="stat-label">days of sunshine/year</span>
+          </div>
+        </div>
+
+        <div style="margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.07);">
+          <div class="section-label">Digital Landscape Gap</div>
+          <p style="font-size:0.82rem; line-height:1.7; color:rgba(244,240,234,0.6); margin-top:0.5rem;">
+            While Ladakh consistently ranks among India's top searched travel destinations, its official digital presence remains fragmented, inconsistent in language, and absent from the emotional storytelling format that drives modern travel decisions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GEOGRAPHY & CONTEXT -->
+<section id="geography">
+  <div class="geo-content">
+    <div class="section-label">The Land We're Presenting</div>
+    <h2 class="section-title">Himalaya, Karakoram,<br>Zanskar & <em>The Indus</em></h2>
+    <div class="section-divider"></div>
+
+    <div class="geo-body">
+      <div class="geo-text">
+        <p>Ladakh is the largest region within the union territory of Jammu & Kashmir, covering approximately <strong>60,000 square miles (100,000 sq. km)</strong>. It is surrounded and bisected by some of the highest mountain ranges in the world.</p>
+        <p>The great <strong>Himalayan Range</strong> runs northwest to southeast, separating Kashmir from Ladakh. The <strong>Zanskar Mountains</strong> enclose the Zanskar River Valley; the <strong>Ladakh Range</strong> forms the Indus River Valley; and to the northeast, the mighty <strong>Karakoram Mountains</strong> define the boundary of Nubra Valley.</p>
+        <p>These towering ranges prevent rain clouds from entering Ladakh — resulting in only about 2 inches (5 cm) of rain per year. This creates the breathtaking aridity: endless mountain vistas with no vegetation, interrupted by oases of green in the valleys.</p>
+        <p>The 30-mile stretch of the <strong>Indus River Valley</strong> between Spitok Gompa and Hemis Gompa is the heartland — home to Leh, the capital, and some of the finest monasteries in the region, all sitting at 11,350 ft (3,500 m) altitude.</p>
+        <p>The people of Ladakh are <strong>Tibetan-Mongoloid</strong> in appearance, with Kashmiri Muslim influences. Descended from the ancient Mon and Dard peoples, they carry a culture stretching back before the 7th century — Buddhists, musicians, weavers, and custodians of one of humanity's rarest living traditions.</p>
+      </div>
+      <div class="geo-facts">
+        <div class="fact-card">
+          <div class="fact-icon">🏔️</div>
+          <div class="fact-title">The Himalayan Range</div>
+          <div class="fact-desc">Separates Kashmir from Ladakh. Peaks reach 22,500 ft. The visual backbone of every Ladakh photograph.</div>
+        </div>
+        <div class="fact-card">
+          <div class="fact-icon">🌊</div>
+          <div class="fact-title">The Indus River</div>
+          <div class="fact-desc">Runs through Ladakh's heartland. The 50 km valley between Spitok and Hemis is the cultural core.</div>
+        </div>
+        <div class="fact-card">
+          <div class="fact-icon">🏔️</div>
+          <div class="fact-title">Karakoram Range</div>
+          <div class="fact-desc">Northeastern boundary. Gateway to Nubra Valley and the dunes of Hunder. Among Earth's highest ranges.</div>
+        </div>
+        <div class="fact-card">
+          <div class="fact-icon">🦋</div>
+          <div class="fact-title">Zanskar Valley</div>
+          <div class="fact-desc">Enclosed by the Zanskar Mountains. Remote, wild, and accessible only by river in winter — the Chadar Trek.</div>
+        </div>
+        <div class="fact-card">
+          <div class="fact-icon">🌿</div>
+          <div class="fact-title">The Mon People</div>
+          <div class="fact-desc">Ancient valley-dwellers; Buddhist musicians of Ladakhi villages. Their music accompanies weddings and ceremonies.</div>
+        </div>
+        <div class="fact-card">
+          <div class="fact-icon">🎋</div>
+          <div class="fact-title">The Dard People</div>
+          <div class="fact-desc">Settled in Dras Valley before the 7th century. Known for distinctive flower headgear of orange ribbons.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section id="problem">
+  <div class="problem-content">
+    <div class="section-label">The Core Problem</div>
+    <h2 class="section-title">Why People Don't<br>Book <em>Ladakh Yet</em></h2>
+    <div class="section-divider"></div>
+
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="problem-num">01</div>
+        <h3>The Perception Barrier</h3>
+        <p>Ladakh is seen as an "extreme adventure destination" — for bikers and trekkers. The softer, transformative, luxury-solitude appeal remains almost entirely uncommunicated to the mass urban audience.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-num">02</div>
+        <h3>Absent Emotional Narrative</h3>
+        <p>Current digital presence (website, social) is largely transactional: packages, prices, itineraries. There is no ongoing story, no voice, no consistent narrative that makes someone feel they must go NOW.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-num">03</div>
+        <h3>Language & Accessibility Gap</h3>
+        <p>Content exists almost exclusively in English. The vast majority of India — Hindi belt, South India, Northeast — receives no culturally resonant messaging in their language or context.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-num">04</div>
+        <h3>Seasonality Blind Spot</h3>
+        <p>90% of awareness sits around June–September. The epic winter landscape, the Chadar Trek, Losar Festival, and snowbound monasteries go virtually unmarked in the content calendar.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-num">05</div>
+        <h3>Missing the Local Voice</h3>
+        <p>Ladakhi people — their faces, food, festivals, traditional dress, ancient chants — rarely appear as protagonists in tourism content. The culture is background scenery, not the main event.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-num">06</div>
+        <h3>No "Transported" Feeling</h3>
+        <p>Travelers who've been to Ladakh describe feeling transported to another world — "like Iceland but ours," "like the Alps never saw this." This revelation is not being marketed. It should be the entire campaign.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPROACH + TAGLINES -->
+<section id="approach">
+  <div class="approach-content">
+    <div class="section-label">The Strategic Bridge</div>
+    <h2 class="section-title">How We Close<br>the <em>Gap</em></h2>
+    <div class="section-divider"></div>
+
+    <div class="approach-grid">
+      <div class="approach-steps">
+        <div class="step">
+          <div class="step-num">01</div>
+          <div class="step-body">
+            <h4>Lead with Emotion, Follow with Information</h4>
+            <p>Every piece of content starts with a feeling — exhaustion, longing, wonder — before it ever mentions altitude or itineraries. We mirror the audience's inner state, then show Ladakh as the answer.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <div class="step-body">
+            <h4>Build a Brand Voice Across All 4 Seasons</h4>
+            <p>Not just summer. We build a 12-month content engine that positions Ladakh as a year-round emotional destination — Spring's flowers, Summer's turquoise lakes, Autumn's harvest gold, Winter's frozen silence.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <div class="step-body">
+            <h4>Multilingual Storytelling — Same Soul, Different Tongue</h4>
+            <p>English as primary. Hindi for the urban heartland. Ladakhi (Bhoti/Tibetic) for authenticity and local pride. Urdu for the cultural bridge. Regional adaptations for Tamil, Bengali, Kannada markets.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">04</div>
+          <div class="step-body">
+            <h4>Make Locals the Stars</h4>
+            <p>Feature Ladakhi faces, perok headdresses, goncha robes, butter tea, sky burials, thangka painting, and monastic chanting. Authenticity is the most powerful differentiator in the age of AI-generated content.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">05</div>
+          <div class="step-body">
+            <h4>Own the "India's Europe" Narrative</h4>
+            <p>Turquoise alpine lakes. Sand dunes between snow peaks. Rolling meadows like Tuscany at 4,500m. We position Ladakh as the answer to every Indian who's dreamed of Europe but wants to feel the pride of discovering it at home.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">06</div>
+          <div class="step-body">
+            <h4>Omnichannel: Digital + Print + OOH + Brand Films</h4>
+            <p>Instagram Reels & Stories, YouTube brand films, OOH at airports/metro stations, brochures in 5 languages, posters at travel expos, partnerships with corporate wellness programs.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tagline-box">
+        <div class="section-label">The Taglines</div>
+
+        <div class="big-tag">"Escape. Feel. Connect."</div>
+        <p style="font-size:0.82rem;color:rgba(244,240,234,0.6);line-height:1.7;">Three words. Three stages of what Ladakh does to every person who arrives.</p>
+
+        <div style="margin-top:1.5rem; padding-top:1.5rem; border-top:1px solid rgba(255,255,255,0.07);">
+          <div class="big-tag" style="font-size:1.6rem;">"Solitude Is The Next Destination"</div>
+          <p style="font-size:0.82rem;color:rgba(244,240,234,0.6);line-height:1.7;margin-top:0.8rem;">For the premium, mindful traveler seeking intentional rest.</p>
+        </div>
+
+        <div class="lang-tags">
+          <div class="section-label" style="margin-top:1rem;">In Every Language</div>
+          <div class="lang-tag">
+            <span class="lang-name">English</span>
+            <span class="lang-text" style="font-family:'DM Sans',sans-serif;font-size:0.85rem;">Escape. Feel. Connect.</span>
+          </div>
+          <div class="lang-tag">
+            <span class="lang-name">Hindi</span>
+            <span class="lang-text">भाग जाओ। महसूस करो। जुड़ जाओ।</span>
+          </div>
+          <div class="lang-tag">
+            <span class="lang-name">Urdu</span>
+            <span class="lang-text" style="direction:rtl;font-size:0.9rem;">فرار کرو۔ محسوس کرو۔ جڑ جاؤ۔</span>
+          </div>
+          <div class="lang-tag">
+            <span class="lang-name">Ladakhi (Bhoti)</span>
+            <span class="lang-text" style="font-size:0.9rem;">ཐར་བ། ཚོར་བ། འབྲེལ་བ།</span>
+          </div>
+        </div>
+
+        <div style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.07);">
+          <div class="section-label">Local Connective Tagline</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-style:italic;color:var(--sand);margin-top:0.5rem;">"यहाँ आकर खो जाओ,<br>खुद को पाओगे।"</div>
+          <p style="font-size:0.75rem;color:rgba(244,240,234,0.45);margin-top:0.5rem;font-style:italic;">"Come here and get lost — you'll find yourself."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTENT PILLARS -->
+<section id="pillars">
+  <div class="pillars-content">
+    <div class="section-label">Strategic Framework</div>
+    <h2 class="section-title">The Five Content<br><em>Pillars</em></h2>
+    <div class="section-divider"></div>
+
+    <div class="pillars-grid">
+      <div class="pillar">
+        <div class="pillar-icon">🏔️</div>
+        <div class="pillar-name">Landscapes</div>
+        <div class="pillar-tags">
+          <span class="ptag">Pangong Tso at sunrise</span>
+          <span class="ptag">Sand dunes of Hunder</span>
+          <span class="ptag">Moon landscapes of Lamayuru</span>
+          <span class="ptag">Magnetic Hill</span>
+          <span class="ptag">Nubra Valley flowers</span>
+          <span class="ptag">Tso Moriri reflections</span>
+        </div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">👥</div>
+        <div class="pillar-name">People & Culture</div>
+        <div class="pillar-tags">
+          <span class="ptag">Ladakhi faces & perok</span>
+          <span class="ptag">Goncha robes & buckoo</span>
+          <span class="ptag">Mon musicians</span>
+          <span class="ptag">Dard women of Baltistan</span>
+          <span class="ptag">Monastery monks at dawn</span>
+          <span class="ptag">Village homestays</span>
+        </div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">🦅</div>
+        <div class="pillar-name">Wildlife</div>
+        <div class="pillar-tags">
+          <span class="ptag">Snow leopard trails</span>
+          <span class="ptag">Black-necked cranes</span>
+          <span class="ptag">Himalayan blue sheep</span>
+          <span class="ptag">Wild yaks of Changthang</span>
+          <span class="ptag">Tibetan foxes</span>
+          <span class="ptag">Kiang (wild ass)</span>
+        </div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">🎭</div>
+        <div class="pillar-name">Festivals & Heritage</div>
+        <div class="pillar-tags">
+          <span class="ptag">Hemis Festival (Jun–Jul)</span>
+          <span class="ptag">Losar — Ladakhi New Year</span>
+          <span class="ptag">Dosmoche Festival</span>
+          <span class="ptag">Sindhu Darshan</span>
+          <span class="ptag">Thiksey Gompa rituals</span>
+          <span class="ptag">Phyang Tsedup</span>
+        </div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">🏕️</div>
+        <div class="pillar-name">Experiences</div>
+        <div class="pillar-tags">
+          <span class="ptag">Chadar Trek (winter)</span>
+          <span class="ptag">Leh–Umling La cycling</span>
+          <span class="ptag">Stargazing at Hanle</span>
+          <span class="ptag">Rafting on the Indus</span>
+          <span class="ptag">Polo matches in Leh</span>
+          <span class="ptag">Butter tea ceremony</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOUR SEASONS -->
+<section id="seasons">
+  <div class="seasons-content">
+    <div class="section-label">The Year in Ladakh</div>
+    <h2 class="section-title">Four Seasons,<br>Four <em>Campaigns</em></h2>
+    <div class="section-divider"></div>
+
+    <div class="seasons-tabs">
+      <button class="s-tab active" onclick="showSeason('spring',this)">🌸 Spring</button>
+      <button class="s-tab" onclick="showSeason('summer',this)">☀️ Summer</button>
+      <button class="s-tab" onclick="showSeason('autumn',this)">🍂 Autumn</button>
+      <button class="s-tab" onclick="showSeason('winter',this)">❄️ Winter</button>
+    </div>
+
+    <div id="spring" class="season-panel active">
+      <div class="s-left">
+        <h3>Spring — The Awakening</h3>
+        <div class="s-months">April · May</div>
+        <p>Apricot and cherry trees burst into bloom across Ladakhi villages. After months of frozen silence, the valleys return to life. The air is crisp and clear. Monasteries begin their spring rituals. This is Ladakh at its most intimate and unphotographed.</p>
+        <p><strong>Content Angle:</strong> "Before the Crowds. After the Cold." — This is Ladakh for the traveler who wants to feel like they discovered something private.</p>
+        <div class="s-activities">
+          <div class="s-sub-title">Activities</div>
+          <div class="tag-cloud">
+            <span class="s-tag">Apricot Blossom walks</span>
+            <span class="s-tag">Monastery spring festivals</span>
+            <span class="s-tag">Birdwatching (migratory season)</span>
+            <span class="s-tag">Village homestays</span>
+            <span class="s-tag">Photography expeditions</span>
+            <span class="s-tag">Cycling trails open up</span>
+          </div>
+        </div>
+        <div class="s-food" style="margin-top:1.5rem;">
+          <div class="s-sub-title">Eat This Season</div>
+          <div class="tag-cloud">
+            <span class="s-tag">Fresh apricot jam (tsampa bread)</span>
+            <span class="s-tag">Skyu — Ladakhi pasta stew</span>
+            <span class="s-tag">Butter tea (gur gur chai)</span>
+            <span class="s-tag">Momos (first of the season)</span>
+            <span class="s-tag">Dried apricots & walnuts</span>
+          </div>
+        </div>
+      </div>
+      <div class="s-right">
+        <div class="weather-info">
+          <div class="s-sub-title">Weather</div>
+          <div class="weather-row"><span class="weather-key">Day Temp</span><span class="weather-val">10–18°C</span></div>
+          <div class="weather-row"><span class="weather-key">Night Temp</span><span class="weather-val">-2 to 5°C</span></div>
+          <div class="weather-row"><span class="weather-key">Road Access</span><span class="weather-val">Manali–Leh opens ~May</span></div>
+          <div class="weather-row"><span class="weather-key">Crowd Level</span><span class="weather-val">Low — ideal timing</span></div>
+        </div>
+        <div class="s-dress">
+          <div class="s-sub-title">What to Wear</div>
+          <p>Layering is essential. Thermal base + fleece mid-layer + windproof outer. During the day, you'll peel down to a light jacket; mornings and evenings demand a warm puffer. Tip: visit local tailors in Leh and wear a traditional <strong>goncha</strong> — a deep-dyed woolen robe tied with a sash. It's both warm and a cultural bridge that locals will love.</p>
+        </div>
+        <div class="s-content-ideas" style="margin-top:1.5rem;">
+          <div class="s-sub-title">Content Ideas</div>
+          <div class="tag-cloud">
+            <span class="s-tag">Reels: Apricot bloom time-lapse</span>
+            <span class="s-tag">Story: "Before the World Arrives"</span>
+            <span class="s-tag">Print: Blossom + monastery brochure</span>
+            <span class="s-tag">OOH: Delhi Metro — spring escape</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="summer" class="season-panel">
+      <div class="s-left">
+        <h3>Summer — The Peak</h3>
+        <div class="s-months">June · July · August</div>
+        <p>This is Ladakh's golden window. Pangong Tso shimmers in electric blue. The Manali-Leh and Srinagar-Leh highways are fully open. Nubra Valley's sand dunes lie between snow-capped peaks — the world's most improbable geography. This is also when the legendary <strong>Hemis Festival</strong> explodes into colour — monks in painted masks, ancient sacred music, thangka unfurlings.</p>
+        <p><strong>Content Angle:</strong> "India Has Its Own Alps. They're Just Higher." — Target the European-vacation dreamer.</p>
+        <div class="s-activities">
+          <div class="s-sub-title">Activities</div>
+          <div class="tag-cloud">
+            <span class="s-tag">Pangong Tso camping</span>
+            <span class="s-tag">Nubra Valley Bactrian camel ride</span>
+            <span class="s-tag">Hemis Festival (masks & monks)</span>
+            <span class="s-tag">Zanskar River rafting</span>
+            <span class="s-tag">Khardung La pass (highest motorable)</span>
+            <span class="s-tag">Leh–Umling La cycling</span>
+            <span class="s-tag">Indus Valley cycling</span>
+            <span class="s-tag">Markha Valley trek</span>
+            <span class="s-tag">Hanle Observatory stargazing</span>
+            <span class="s-tag">Polo at Leh Polo Ground</span>
+          </div>
+        </div>
+        <div class="s-food" style="margin-top:1.5rem;">
+          <div class="s-sub-title">Eat This Season</div>
+          <div class="tag-cloud">
+            <span class="s-tag">Thukpa (noodle broth)</span>
+            <span class="s-tag">Tsampa porridge at dawn</span>
+            <span class="s-tag">Chhang — barley beer at festivals</span>
+            <span class="s-tag">Fresh river trout</span>
+            <span class="s-tag">Khambir bread + apricot chutney</span>
+            <span class="s-tag">Yak milk cheese</span>
+          </div>
+        </div>
+      </div>
+      <div class="s-right">
+        <div class="weather-info">
+          <div class="s-sub-title">Weather</div>
+          <div class="weather-row"><span class="weather-key">Day Temp</span><span class="weather-val">22–30°C</span></div>
+          <div class="weather-row"><span class="weather-key">Night Temp</span><span class="weather-val">8–14°C</span></div>
+          <div class="weather-row"><span class="weather-key">UV Index</span><span class="weather-val">Extreme — SPF 50+ mandatory</span></div>
+          <div class="weather-row"><span class="weather-key">Crowd Level</span><span class="weather-val">Peak — book 3 months ahead</span></div>
+        </div>
+        <div class="s-dress">
+          <div class="s-sub-title">What to Wear</div>
+          <p>Sunblock, sunglasses, hat — non-negotiable at altitude. Breathable trekking layers for day. Always carry a warm fleece for passes and evenings. For festivals, consider wearing a Ladakhi <strong>buckoo</strong> (women's wrap-around) or a simple goncha — locals will greet you with smiles and tea. Women's traditional peroks (turquoise-and-coral headbands) make for extraordinary portrait moments — with permission.</p>
+        </div>
+        <div class="s-content-ideas" style="margin-top:1.5rem;">
+          <div class="s-sub-title">Content Ideas</div>
+          <div class="tag-cloud">
+            <span class="s-tag">Brand film: Pangong Tso at 4 AM</span>
+            <span class="s-tag">Reel: Hemis Festival masks close-up</span>
+            <span class="s-tag">Brochure: 4-language summer guide</span>
+            <span class="s-tag">OOH: Airports "Skip Europe This Year"</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="autumn" class="season-panel">
+      <div class="s-left">
+        <h3>Autumn — The Gold</h3>
+        <div class="s-months">September · October</div>
+        <p>The poplars turn gold. The harvest is brought in. Crowds have thinned but the weather is still magnificent — arguably the best light of the year for photography. The plateau glows amber. The Indus reflects the turning leaves. This is Ladakh for the slow traveler, the writer, the painter, the person who came not to see but to feel.</p>
+        <p><strong>Content Angle:</strong> "After the Crowds Went Home, the Light Got Better." — Positioning autumn as the insider season.</p>
+        <div class="s-activities">
+          <div class="s-sub-title">Activities</div>
+          <div class="tag-cloud">
+            <span class="s-tag">Harvest festival participation</span>
+            <span class="s-tag">Photography — golden hour valleys</span>
+            <span class="s-tag">High-altitude lakes (crystal clear)</span>
+            <span class="s-tag">Ladakh Literary Festival (Leh)</span>
+            <span class="s-tag">Tso Kar salt lake birding</span>
+            <span class="s-tag">Meditation retreats (monastery guesthouses)</span>
+          </div>
+        </div>
+        <div class="s-food" style="margin-top:1.5rem;">
+          <div class="s-sub-title">Eat This Season</div>
+          <div class="tag-cloud">
+            <span class="s-tag">Harvest peas & seasonal vegetables</span>
+            <span class="s-tag">Walnut halwa</span>
+            <span class="s-tag">Fresh-pressed apricot oil</span>
+            <span class="s-tag">Mutton thukpa (warming stew)</span>
+            <span class="s-tag">Roasted barley tsampa</span>
+          </div>
+        </div>
+      </div>
+      <div class="s-right">
+        <div class="weather-info">
+          <div class="s-sub-title">Weather</div>
+          <div class="weather-row"><span class="weather-key">Day Temp</span><span class="weather-val">10–20°C</span></div>
+          <div class="weather-row"><span class="weather-key">Night Temp</span><span class="weather-val">-5 to 2°C</span></div>
+          <div class="weather-row"><span class="weather-key">Road Access</span><span class="weather-val">Closing ~Oct end</span></div>
+          <div class="weather-row"><span class="weather-key">Crowd Level</span><span class="weather-val">Low — peaceful, golden</span></div>
+        </div>
+        <div class="s-dress">
+          <div class="s-sub-title">What to Wear</div>
+          <p>Full winter layering begins. A serious down jacket is essential for evenings. By October, thermals are worn all day. The locals begin wearing their heavy woolen gonchas full-time — the maroon and brown robes tied with bright sashes. It's one of the most beautiful sights of the season. Consider purchasing one at the local markets — Ladakhi women's gonchas are fitted with small pleats and often paired with a luxurious goatskin cape.</p>
+        </div>
+        <div class="s-content-ideas" style="margin-top:1.5rem;">
+          <div class="s-sub-title">Content Ideas</div>
+          <div class="tag-cloud">
+            <span class="s-tag">Print: "Autumn in Ladakh" art book</span>
+            <span class="s-tag">Reel: Golden poplar timelapse</span>
+            <span class="s-tag">Blog: The Insider's Autumn Guide</span>
+            <span class="s-tag">OOH: Mumbai — "It's harvest season up there"</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="winter" class="season-panel">
+      <div class="s-left">
+        <h3>Winter — The Silence</h3>
+        <div class="s-months">November · December · January · February · March</div>
+        <p>The highways close. The valleys fill with snow. The Zanskar River freezes — and becomes a walking road. This is the <strong>Chadar Trek</strong>: walking on a frozen river beneath vertical cliffs in -20°C. This is also when the monasteries are most alive with winter prayer rituals. And the skies — the skies are clearer than anywhere on Earth.</p>
+        <p><strong>Content Angle:</strong> "They Said Don't Go in Winter. We'll Meet You There." — The campaign for the adventure seeker and the genuine solitude hunter.</p>
+        <div class="s-activities">
+          <div class="s-sub-title">Activities</div>
+          <div class="tag-cloud">
+            <span class="s-tag">Chadar Trek (Jan–Feb only)</span>
+            <span class="s-tag">Losar — Ladakhi New Year</span>
+            <span class="s-tag">Stargazing at Hanle Dark Sky Reserve</span>
+            <span class="s-tag">Gustor Festival at Spituk Monastery</span>
+            <span class="s-tag">Snow leopard tracking tours</span>
+            <span class="s-tag">Winter camping under Milky Way</span>
+            <span class="s-tag">Ice skating on village ponds</span>
+            <span class="s-tag">Meditation in monastery guest rooms</span>
+          </div>
+        </div>
+        <div class="s-food" style="margin-top:1.5rem;">
+          <div class="s-sub-title">Eat This Season</div>
+          <div class="tag-cloud">
+            <span class="s-tag">Gur gur chai — yak butter tea (mandatory!)</span>
+            <span class="s-tag">Skyu — thick vegetable stew</span>
+            <span class="s-tag">Khambir bread toasted on stove</span>
+            <span class="s-tag">Dried apricot soup</span>
+            <span class="s-tag">Hot chhang (warming barley spirit)</span>
+          </div>
+        </div>
+      </div>
+      <div class="s-right">
+        <div class="weather-info">
+          <div class="s-sub-title">Weather</div>
+          <div class="weather-row"><span class="weather-key">Day Temp</span><span class="weather-val">-5 to 5°C</span></div>
+          <div class="weather-row"><span class="weather-key">Night Temp</span><span class="weather-val">-15 to -30°C</span></div>
+          <div class="weather-row"><span class="weather-key">Access</span><span class="weather-val">Only by air to Leh</span></div>
+          <div class="weather-row"><span class="weather-key">Sky Quality</span><span class="weather-val">Exceptional — near-zero light pollution</span></div>
+        </div>
+        <div class="s-dress">
+          <div class="s-sub-title">What to Wear</div>
+          <p>This is not negotiable: <strong>down jacket rated to -30°C</strong>, thermal underlayer (wool preferred), insulated boots, balaclava, goggles. Locals wear their heaviest gonchas with full-length fur-lined versions — watching a monk emerge from a monastery doorway in snow, in crimson robes, is an image that doesn't leave you. For Chadar, specialist gear rental is available in Leh.</p>
+        </div>
+        <div class="s-content-ideas" style="margin-top:1.5rem;">
+          <div class="s-sub-title">Content Ideas</div>
+          <div class="tag-cloud">
+            <span class="s-tag">Brand film: "The Night Sky Tour"</span>
+            <span class="s-tag">Reel: Chadar trek POV</span>
+            <span class="s-tag">Story series: "Monks in Winter"</span>
+            <span class="s-tag">OOH: "The whole country goes south. You go up."</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROADMAP / ROUTE -->
+<section id="roadmap">
+  <div class="road-content">
+    <div class="section-label">The Grand Journey</div>
+    <h2 class="section-title">Spiti to Sarchu to Nubra<br>to <em>Pangong Tso</em> — The Full Circuit</h2>
+    <div class="section-divider"></div>
+    <p style="font-size:0.9rem;color:rgba(244,240,234,0.6);max-width:700px;line-height:1.8;margin-bottom:1rem;">
+      A route that can be done by motorcycle, 4WD, or — for those who want the most extraordinary version — <strong>cycling</strong>. The Leh–Umling La route is the world's highest motorable road cycling challenge. Below is the full circuit with activities at each node.
+    </p>
+
+    <div class="road-route">
+      <div class="route-line"></div>
+
+      <div class="route-stop">
+        <div class="stop-num">Start · Spiti</div>
+        <div class="stop-body">
+          <h4>Spiti Valley, Himachal Pradesh</h4>
+          <div class="stop-alt">~3,800m · Entry via Manali (NH-3)</div>
+          <p>The gateway. Dramatic desert mountain landscape, Key Monastery perched on a hilltop. The emotional start of the "otherworld" journey.</p>
+          <div class="stop-acts">
+            <span class="act-tag">Key Monastery visit</span>
+            <span class="act-tag">Chicham Bridge (Asia's highest village bridge)</span>
+            <span class="act-tag">Fossils at Langza</span>
+            <span class="act-tag">Cycling: Manali to Spiti</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="route-stop">
+        <div class="stop-num">Stop 02 · Sarchu</div>
+        <div class="stop-body">
+          <h4>Sarchu — The Borderland Camp</h4>
+          <div class="stop-alt">~4,250m · Himachal–Ladakh border</div>
+          <p>A tent-city between states. Nothing for miles but glaciers. The first night here under stars is something people still speak about decades later.</p>
+          <div class="stop-acts">
+            <span class="act-tag">Gata Loops viewpoint</span>
+            <span class="act-tag">Overnight tent camping</span>
+            <span class="act-tag">Cycling: Baralacha La pass</span>
+            <span class="act-tag">Stargazing (zero light pollution)</span>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="route-stop">
+        <div class="stop-num">Stop 03 · Nubra Valley</div>
+        <div class="stop-body">
+          <h4>Nubra Valley — The Sand & Snow</h4>
+          <div class="stop-alt">~3,100m · Via Khardung La (5,359m)</div>
+          <p>Cross Khardung La — one of the world's highest motorable passes. Descend into a valley of sand dunes flanked by glaciers. Hunder's double-humped Bactrian camels walk against a backdrop of snow peaks — nothing like this exists anywhere else.</p>
+          <div class="stop-acts">
+            <span class="act-tag">Khardung La summit</span>
+            <span class="act-tag">Hunder dunes + Bactrian camel ride</span>
+            <span class="act-tag">Diskit Monastery (100ft Maitreya Buddha)</span>
+            <span class="act-tag">Siachen Glacier viewpoint</span>
+            <span class="act-tag">Cycling: Khardung La descent</span>
+            <span class="act-tag">Sumur hot springs</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="route-stop">
+        <div class="stop-num">Stop 04 · Pangong Tso</div>
+        <div class="stop-body">
+          <h4>Pangong Tso — The Blue That Doesn't Exist</h4>
+          <div class="stop-alt">~4,350m · 134 km long, 60% in Tibet</div>
+          <p>The lake changes from turquoise to cerulean to navy in the same afternoon. Camp on the shore. Wake to silence. Watch the sunlight pull colours across the water that no camera has ever fully captured. This is the emotional apex of the entire journey.</p>
+          <div class="stop-acts">
+            <span class="act-tag">Shore camping overnight</span>
+            <span class="act-tag">3 Idiots viewpoint (Meru Phu)</span>
+            <span class="act-tag">Spangmik to Man to Merak walk</span>
+            <span class="act-tag">Photography: blue hour</span>
+            <span class="act-tag">Cycling: Chang La approach</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="route-stop">
+        <div class="stop-num">Stop 06 · Leh</div>
+        <div class="stop-body">
+          <h4>Leh — The Capital of the Sky</h4>
+          <div class="stop-alt">~3,500m · Capital of Ladakh</div>
+          <p>Acclimatise. Wander the Old Town. Visit Leh Palace and Shanti Stupa at sunset. Explore the bazaars for goncha fabrics, perok jewellery, Tibetan thangkas. Eat at local dhabas.</p>
+          <div class="stop-acts">
+            <span class="act-tag">Leh Palace & Shanti Stupa</span>
+            <span class="act-tag">Hemis / Thiksey / Spitok Gompas</span>
+            <span class="act-tag">Local market — goncha, perok, thangka</span>
+            <span class="act-tag">Indus rafting</span>
+            <span class="act-tag">Cycling base: Leh to Umling La</span>
+            <span class="act-tag">Magnetic Hill photo stop</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="route-stop" style="padding-bottom:0;">
+        <div class="stop-num">End · Kargil</div>
+        <div class="stop-body">
+          <h4>Kargil — Where Cultures Converge</h4>
+          <div class="stop-alt">~2,680m · Via NH-1, Srinagar Highway</div>
+          <p>The second city of Ladakh. A Muslim-majority town with Buddhist surroundings — a living example of Ladakh's extraordinary cultural synthesis. Mulbekh's ancient rock carving of Maitreya Buddha. The Suru Valley of dramatic glacier views.</p>
+          <div class="stop-acts">
+            <span class="act-tag">Mulbekh Chamba Rock Carving</span>
+            <span class="act-tag">Rangdum Monastery</span>
+            <span class="act-tag">Suru Valley glacier views</span>
+            <span class="act-tag">Lamayuru Moonland</span>
+            <span class="act-tag">Cycling: Fotu La & Namika La passes</span>
+            <span class="act-tag">Local Balti cuisine</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CULTURE, PEOPLE, FOOD -->
+<section id="culture">
+  <div class="culture-content">
+    <div class="section-label">People, Food & Heritage</div>
+    <h2 class="section-title">The Humans of<br><em>Ladakh</em></h2>
+    <div class="section-divider"></div>
+    <div class="culture-grid">
+      <div class="culture-card">
+        <div class="c-icon">👘</div>
+        <h4>The Goncha — A Living Garment</h4>
+        <p>The traditional Ladakhi robe — long, maroon or brown heavy wool, tied with a bright pink or red sash. Men wear it loosely; women's gonchas are fitted with small pleats and often paired with a goatskin cape. When you wear one, the village opens up to you.</p>
+      </div>
+      <div class="culture-card">
+        <div class="c-icon">👑</div>
+        <h4>The Perok — Crown of the Mountains</h4>
+        <p>Ladakhi women's ceremonial headgear — a long band covered in turquoise and coral stones, running from forehead down the back. A family heirloom. The Dard women of Baltistan wear distinctive flower-shaped orange ribbon crowns instead. Both are extraordinary portrait subjects.</p>
+      </div>
+      <div class="culture-card">
+        <div class="c-icon">🎵</div>
+        <h4>The Mon — Music Keepers</h4>
+        <p>The Mon people are the musicians of Ladakhi society — performing at weddings, social gatherings, harvest celebrations. Their instruments and rhythms carry a Buddhist tradition derived directly from India, predating Tibetan Tantric influences. Their music is Ladakh's heartbeat.</p>
+      </div>
+      <div class="culture-card">
+        <div class="c-icon">🍵</div>
+        <h4>Gur Gur Chai — The Tea of Life</h4>
+        <p>Yak butter tea. Churned in a long wooden cylinder with salt and soda. Creamy, savory, nothing like anything else. At altitude, it's survival. In a Ladakhi home, being offered gur gur chai is the highest form of welcome. Never refuse the first cup.</p>
+      </div>
+      <div class="culture-card">
+        <div class="c-icon">🎭</div>
+        <h4>Cham Dance — The Sacred Mask</h4>
+        <p>Performed by monks at Hemis, Thiksey, and Spituk monasteries during festivals. Elaborate painted masks representing deities and demons. A ritual as old as the monasteries themselves. For a visitor who has never seen it, it feels like time travel — and it is.</p>
+      </div>
+      <div class="culture-card">
+        <div class="c-icon">🏡</div>
+        <h4>Homestay Culture — The Real Ladakh</h4>
+        <p>Staying in a Ladakhi family home is increasingly available. Sleeping on thick wool mattresses, eating homemade skyu, watching a grandmother spin yak wool, waking to a monk's horn echo across the valley — no hotel provides this. It must be the cornerstone of our experience marketing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PLATFORMS -->
+<section id="platforms">
+  <div class="plat-content">
+    <div class="section-label">Content & Platform Strategy</div>
+    <h2 class="section-title">Where the Story<br><em>Lives</em></h2>
+    <div class="section-divider"></div>
+    <div class="plat-grid">
+      <div class="plat-card">
+        <div class="plat-name">Instagram / Reels</div>
+        <h4>Visual Emotion Engine</h4>
+        <ul>
+          <li>15–30s cinematic reels — landscape reveals, festival moments</li>
+          <li>Carousel: "4 reasons winter Ladakh" style</li>
+          <li>Stories: daily travel polls, quizzes, countdowns</li>
+          <li>Collaboration with travel & wellness creators (250K–5M range)</li>
+          <li>Branded hashtag: #EscapeFeelConnect</li>
+          <li>Language: English + Hindi captions</li>
+        </ul>
+      </div>
+      <div class="plat-card">
+        <div class="plat-name">YouTube</div>
+        <h4>Brand Film Home</h4>
+        <ul>
+          <li>2–5 min brand films per season</li>
+          <li>"The Night Sky" winter film</li>
+          <li>"Before the Crowd" spring film</li>
+          <li>People series: "Faces of Ladakh"</li>
+          <li>Cooking series: "What They Eat at 3,500m"</li>
+          <li>Documentary: "The Mon Musicians"</li>
+        </ul>
+      </div>
+      <div class="plat-card">
+        <div class="plat-name">Print & Brochures</div>
+        <h4>The Tangible Story</h4>
+        <ul>
+          <li>Multilingual brochure set: EN / HI / UR / Bhoti / Regional</li>
+          <li>Seasonal A3 fold-out route maps</li>
+          <li>Cultural guide booklet (people, dress, food, etiquette)</li>
+          <li>Festival calendar poster (annual)</li>
+          <li>Travel agency B2B package inserts</li>
+          <li>Coffee table format: "Faces of Ladakh"</li>
+        </ul>
+      </div>
+      <div class="plat-card">
+        <div class="plat-name">OOH / Outdoor</div>
+        <h4>The Interruption</h4>
+        <ul>
+          <li>Mumbai / Delhi / Bengaluru metro — commuter escape messaging</li>
+          <li>IGI, CSIA, BLR airport arrivals + departures</li>
+          <li>Hoardings near IT parks: "This is what waiting feels like" → Ladakh visual</li>
+          <li>Mall atriums: immersive landscape light panels</li>
+          <li>Corporate park LED: night sky campaigns</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SAMPLE CALENDAR -->
+<section id="calendar">
+  <div class="cal-content">
+    <div class="section-label">Content Calendar</div>
+    <h2 class="section-title">12-Month Posting<br><em>Plan</em></h2>
+    <div class="section-divider"></div>
+    <p style="font-size:0.85rem;color:rgba(244,240,234,0.55);margin-bottom:1rem;">Sample weekly cadence: 3–4 posts/week across Instagram, 2 YouTube videos/month, 1 blog/newsletter per week.</p>
+
+    <div style="overflow-x:auto;">
+    <table class="cal-table">
+      <thead>
+        <tr>
+          <th>Month</th>
+          <th>Season Focus</th>
+          <th>Hero Content</th>
+          <th>Instagram / Reels</th>
+          <th>YouTube</th>
+          <th>Print / OOH</th>
+          <th>Festival / Event</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="cal-month">January</span></td>
+          <td>❄️ Deep Winter</td>
+          <td>Chadar Trek Brand Film</td>
+          <td><span class="platform-badge badge-reel">Reel</span> Frozen Zanskar River<br><span class="platform-badge">Story</span> Temperature at -25°C</td>
+          <td>"Walking on Water" — Chadar doc</td>
+          <td>OOH: Airport "They Said Don't Go"</td>
+          <td>Losar Festival (Ladakhi New Year)</td>
+        </tr>
+        <tr>
+          <td><span class="cal-month">February</span></td>
+          <td>❄️ Winter Stars</td>
+          <td>"Night Sky" Stargazing Campaign</td>
+          <td><span class="platform-badge badge-reel">Reel</span> Milky Way timelapse<br><span class="platform-badge">Carousel</span> Snow Leopard sightings</td>
+          <td>"The Sky at 5,000m" — stargazing film</td>
+          <td>Print: Winter Ladakh brochure (Hindi)</td>
+          <td>Gustor Festival, Spituk Gompa</td>
+        </tr>
+        <tr>
+          <td><span class="cal-month">March</span></td>
+          <td>🌸 Pre-Spring</td>
+          <td>Dosmoche Festival Coverage</td>
+          <td><span class="platform-badge badge-reel">Reel</span> Cham dance monks<br><span class="platform-badge">Story</span> "Ladakh wakes up"</td>
+          <td>Dosmoche Festival mini-doc</td>
+          <td>OOH: Metro stations, spring tease</td>
+          <td>Dosmoche Festival (Leh)</td>
+        </tr>
+        <tr>
+          <td><span class="cal-month">April</span></td>
+          <td>🌸 Blossom</td>
+          <td>Apricot Bloom Visual Series</td>
+          <td><span class="platform-badge badge-reel">Reel</span> Bloom timelapse<br><span class="platform-badge">Carousel</span> "Before the crowd"</td>
+          <td>"Ladakh in Bloom" — spring film</td>
+          <td>Print brochure: EN + Urdu launch</td>
+          <td>Apricot Blossom Festival, Nubra</td>
+        </tr>
+        <tr>
+          <td><span class="cal-month">May</span></td>
+          <td>🌸 Road Opening</td>
+          <td>Manali–Leh Highway Opens!</td>
+          <td><span class="platform-badge badge-reel">Reel</span> First convoy on highway<br><span class="platform-badge">Story</span> Road trip packing guide</td>
+          <td>"The Road Opens" — biker special</td>
+          <td>OOH: "The road is open. Are you?" Delhi</td>
+          <td>Saga Dawa (Buddha Purnima)</td>
+        </tr>
+        <tr>
+          <td><span class="cal-month">June</span></td>
+          <td>☀️ Early Summer</td>
+          <td>Pangong Tso Campaign Launch</td>
+          <td><span class="platform-badge badge-reel">Reel</span> Pangong timelapse dawn<br><span class="platform-badge">Carousel</span> Packing for altitude</td>
+          <td>"Pangong: The Lake That Isn't Real"</td>
+          <td>Airport OOH: EN + Hindi Pangong visual</td>
+          <td>Sindhu Darshan Festival</td>
+        </tr>
+        <tr>
+          <td><span class="cal-month">July</span></td>
+          <td>☀️ Peak Season</td>
+          <td>Hemis Festival — Full Coverage</td>
+          <td><span class="platform-badge badge-reel">Reel</span> Masked Cham dance<br><span class="platform-badge">Story</span> "Live from Hemis"</td>
+          <td>"The Festival of Masks" — brand film</td>
+          <td>Print: Hemis poster (4 languages)</td>
+          <td>Hemis Festival (largest in Ladakh)</td>
+        </tr>
+        <tr>
+          <td><span class="cal-month">August</span></td>
+          <td>☀️ Summer Peak</td>
+          <td>People of Ladakh Series</td>
+          <td><span class="platform-badge badge-reel">Reel</span> Portrait: Ladakhi grandmother<br><span class="platform-badge">Carousel</span> Traditional dress guide</td>
+          <td>"Faces of Ladakh" — 20min doc</td>
+          <td>OOH: "Meet the Real Ladakh"</td>
+          <td>Ladakh Festival (Leh) — polo, archery</td>
+        </tr>
+        <tr>
+          <td><span class="cal-month">September</span></td>
+          <td>🍂 Early Autumn</td>
+          <td>Cycling Campaign: Leh to Umling La</td>
+          <td><span class="platform-badge badge-reel">Reel</span> Cyclist at Umling La summit<br><span class="platform-badge">Story</span> "World's highest road"</td>
+          <td>"Climb: Leh to Umling La" — cycling film</td>
+          <td>Print: Cycling route map — EN + Hindi</td>
+          <td>Phyang Tsedup Festival</td>
+        </tr>
+        <tr>
+          <td><span class="cal-month">October</span></td>
+          <td>🍂 Golden Autumn</td>
+          <td>"After the Crowd" Golden Season</td>
+          <td><span class="platform-badge badge-reel">Reel</span> Golden poplars on Indus<br><span class="platform-badge">Carousel</span> Autumn food guide</td>
+          <td>"The Quiet Season" — 4-min film</td>
+          <td>OOH: Mumbai — "The gold is up north"</td>
+          <td>Harvest festivals, village celebrations</td>
+        </tr>
+        <tr>
+          <td><span class="cal-month">November</span></td>
+          <td>❄️ Entering Winter</td>
+          <td>Snow Leopard Season Begins</td>
+          <td><span class="platform-badge badge-reel">Reel</span> First snow at Pangong<br><span class="platform-badge">Story</span> Snow leopard tracking</td>
+          <td>"The Ghost Cat of Ladakh"</td>
+          <td>Print: Wildlife guide brochure</td>
+          <td>Monasteries begin winter prayers</td>
+        </tr>
+        <tr>
+          <td><span class="cal-month">December</span></td>
+          <td>❄️ Year-End</td>
+          <td>"Solitude is the Next Destination"</td>
+          <td><span class="platform-badge badge-reel">Reel</span> Frozen monastery at dawn<br><span class="platform-badge">Carousel</span> Year in Ladakh recap</td>
+          <td>"A Year in Ladakh" — year-end film</td>
+          <td>OOH: "While everyone parties, you find peace"</td>
+          <td>New Year night sky events at Hanle</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</section>
+
+<!-- KPIs -->
+<section id="kpis">
+  <div class="kpi-content">
+    <div class="section-label">Measurement Framework</div>
+    <h2 class="section-title">KPIs — How We<br>Know It <em>Worked</em></h2>
+    <div class="section-divider"></div>
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-num">500K</div>
+        <div class="kpi-label">Instagram followers (Year 1 target)</div>
+        <div class="kpi-phase">Q1–Q4 build</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-num">5M+</div>
+        <div class="kpi-label">Monthly reach across platforms</div>
+        <div class="kpi-phase">By Q3</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-num">8%</div>
+        <div class="kpi-label">Average engagement rate</div>
+        <div class="kpi-phase">Industry avg is 1.5%</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-num">12</div>
+        <div class="kpi-label">Brand films produced (Year 1)</div>
+        <div class="kpi-phase">1 per month</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-num">5</div>
+        <div class="kpi-label">Languages in active content</div>
+        <div class="kpi-phase">EN, HI, UR, Bhoti, Regional</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-num">40%</div>
+        <div class="kpi-label">Off-peak booking increase (Q4–Q1)</div>
+        <div class="kpi-phase">Winter + Autumn seasons</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-num">50+</div>
+        <div class="kpi-label">Creator & media collaborations</div>
+        <div class="kpi-phase">Mix of micro & macro</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-num">3X</div>
+        <div class="kpi-label">Website traffic growth (Year 1)</div>
+        <div class="kpi-phase">via SEO + social referral</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section id="timeline">
+  <div class="tl-content">
+    <div class="section-label">Execution Roadmap</div>
+    <h2 class="section-title">12-Month<br><em>Timeline</em></h2>
+    <div class="section-divider"></div>
+    <div class="tl-grid">
+      <div class="tl-phase phase-1">
+        <div class="tl-quarter">Q1 · Jan–Mar</div>
+        <h4>Foundation & Winter Launch</h4>
+        <div class="tl-items">
+          <div class="tl-item">Brand voice & style guide creation</div>
+          <div class="tl-item">Multilingual content framework (5 languages)</div>
+          <div class="tl-item">Chadar Trek brand film shoot</div>
+          <div class="tl-item">Losar & Dosmoche festival coverage</div>
+          <div class="tl-item">Website refresh brief & delivery</div>
+          <div class="tl-item">"Night Sky" stargazing campaign</div>
+          <div class="tl-item">First OOH placements — airport & metro</div>
+        </div>
+      </div>
+      <div class="tl-phase phase-2">
+        <div class="tl-quarter">Q2 · Apr–Jun</div>
+        <h4>Spring & Pre-Season Surge</h4>
+        <div class="tl-items">
+          <div class="tl-item">Apricot Blossom content series</div>
+          <div class="tl-item">Manali–Leh opening campaign</div>
+          <div class="tl-item">Brochure print run — 4 languages</div>
+          <div class="tl-item">Creator partnerships begin (10–15)</div>
+          <div class="tl-item">Pangong Tso campaign teaser</div>
+          <div class="tl-item">Corporate wellness outreach</div>
+          <div class="tl-item">YouTube channel launch with spring film</div>
+        </div>
+      </div>
+      <div class="tl-phase phase-3">
+        <div class="tl-quarter">Q3 · Jul–Sep</div>
+        <h4>Peak Season Content Blitz</h4>
+        <div class="tl-items">
+          <div class="tl-item">Hemis Festival live coverage</div>
+          <div class="tl-item">"Faces of Ladakh" documentary series</div>
+          <div class="tl-item">Cycling campaign — Umling La</div>
+          <div class="tl-item">Maximum OOH — all 5 cities</div>
+          <div class="tl-item">Ladakh Festival live content</div>
+          <div class="tl-item">International press & media junket</div>
+          <div class="tl-item">Peak booking conversion push</div>
+        </div>
+      </div>
+      <div class="tl-phase phase-4">
+        <div class="tl-quarter">Q4 · Oct–Dec</div>
+        <h4>Autumn & Year-End Positioning</h4>
+        <div class="tl-items">
+          <div class="tl-item">"After the Crowd" autumn campaign</div>
+          <div class="tl-item">Snow Leopard season wildlife content</div>
+          <div class="tl-item">Year-end brand film: "A Year in Ladakh"</div>
+          <div class="tl-item">Chadar Trek 2026 early booking push</div>
+          <div class="tl-item">Annual report & strategy review</div>
+          <div class="tl-item">Next year plan brief & proposals</div>
+          <div class="tl-item">Holiday "Solitude" campaign — Dec</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="whyus">
+  <div class="why-content">
+    <div class="section-label">Why This Partnership</div>
+    <h2 class="section-title">Why Us —<br>The <em>Difference</em></h2>
+    <div class="section-divider"></div>
+    <div class="why-grid">
+      <div class="why-card">
+        <h4>We Don't Sell Tours. We Sell Transformation.</h4>
+        <p>Every brand communicates features. We communicate feelings. Our work starts with the emotional gap in your audience's life and shows exactly how Ladakh fills it. That's not tourism marketing. That's storytelling that converts.</p>
+      </div>
+      <div class="why-card">
+        <h4>We Respect the Land & Its People</h4>
+        <p>Ladakhi culture is not a prop. Our content team works with local photographers, musicians, monks, and community storytellers. Authenticity is not a buzzword here — it's an editorial standard.</p>
+      </div>
+      <div class="why-card">
+        <h4>Multilingual from Day One</h4>
+        <p>Most tourism campaigns are English-first and everything-else never. We build the Hindi, Urdu, and Bhoti versions as primary deliverables, not translations. India's heartland speaks Hindi. We speak to them.</p>
+      </div>
+      <div class="why-card">
+        <h4>12-Month, 4-Season Thinking</h4>
+        <p>We don't vanish after the summer campaign. Our content engine runs year-round, building audience trust in the off-season so your competitors' peaks become your bookings.</p>
+      </div>
+      <div class="why-card">
+        <h4>Integrated: Digital + Print + Film + OOH</h4>
+        <p>Most agencies do digital. Some do print. Few do brand films. Almost none connect all four into a coherent brand narrative. We architect the full ecosystem — from Instagram Reels to airport hoardings to brochures to long-form documentary.</p>
+      </div>
+      <div class="why-card">
+        <h4>We've Already Felt What You're Selling</h4>
+        <p>The man in the meeting room who closes his eyes and sees a sky full of stars — that's not invented. That's how everyone in this team has felt about Ladakh at some point. We make content from inside the feeling, not outside the brief.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSING -->
+<section id="closing">
+  <div class="stars-canvas" style="position:absolute;inset:0;opacity:0.3;"></div>
+  <div class="mountains-silhouette" style="opacity:0.4;"></div>
+  <div class="closing-content">
+    <h2>"The most extraordinary<br>place in India is the one<br>most Indians haven't found yet."</h2>
+    <p>Ladakh isn't waiting to be discovered. It's waiting to be told. The landscape has always been there — 60,000 square miles of silence, starlight, turquoise water, butter tea, golden monasteries, and the kind of wind that asks nothing of you except that you stop.</p>
+    <p>We're not here to run a campaign. We're here to carry that feeling across every screen, every printed page, every billboard, every spoken language — until the whole country closes their eyes in a meeting and knows exactly where they need to go.</p>
+
+    <div style="margin: 2.5rem 0; padding: 1.5rem 2rem; border: 1px solid rgba(201,168,76,0.3); display:inline-block;">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-style:italic;color:var(--gold);">Escape. Feel. Connect.</div>
+      <div style="font-family:'Noto Serif Devanagari',serif;font-size:1rem;color:rgba(212,184,150,0.7);margin-top:0.3rem;">भाग जाओ। महसूस करो। जुड़ जाओ।</div>
+    </div>
+
+    <br>
+    <a class="cta-btn" href="#story">Begin the Story ↑</a>
+  </div>
+</section>
+
+<footer>
+  <span>Ladakh Content Strategy · 2026–27 · Confidential Proposal</span>
+  <span>Escape · Feel · Connect · ཐར་བ། ཚོར་བ། འབྲེལ་བ།</span>
+</footer>
+
+<script>
+function showSeason(id, btn) {
+  document.querySelectorAll('.season-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.s-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+}
+</script>
+
+</body>
+</html>
